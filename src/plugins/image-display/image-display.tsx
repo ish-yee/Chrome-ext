@@ -1,5 +1,5 @@
 import { Button } from "@components/Button";
-import { NoxPlugin, WidgetConfigurationScreenProps, WidgetRenderProps, WidgetDescriptor } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetConfigurationScreenProps, WidgetRenderProps, WidgetDescriptor } from "@utils/user-data/types";
 import './styles.scss';
 import { translate } from "@translations/index";
 import { useTranslation } from "react-i18next";
@@ -69,4 +69,4 @@ export const imagePlugin = {
         widgetDescriptor,
     ],
     configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

@@ -1,6 +1,6 @@
 import { AtomWithBrowserStorage, atomWithBrowserStorage, setAtomWithStorageValue, storage, useAtomWithStorage, useBrowserStorageValue } from "@utils/storage/api";
 import { atom, useAtom } from "jotai";
-import { NoxPlugin, Folder, FolderDetailsInStorage, ID, WidgetDescriptor, WidgetInFolder, WidgetInFolderWithMeta, homeFolder } from "./types";
+import { ishitaPlugin, Folder, FolderDetailsInStorage, ID, WidgetDescriptor, WidgetInFolder, WidgetInFolderWithMeta, homeFolder } from "./types";
 import { guid } from "@utils/misc";
 import { useMemo } from "react";
 import { availablePluginsWithWidgets } from "@plugins/all";
@@ -115,7 +115,7 @@ export const setFolderDetails = async (id: ID, details: FolderDetailsInStorage) 
 
 
 export const useFolderWidgets = (folder: Folder) => {
-    const addWidget = <T extends {}>({ plugin, widget, config, position, size }: { widget: WidgetDescriptor<T>, plugin: NoxPlugin<any, T>, config: T, position: Position, size?: LayoutItemSize }) => {
+    const addWidget = <T extends {}>({ plugin, widget, config, position, size }: { widget: WidgetDescriptor<T>, plugin: ishitaPlugin<any, T>, config: T, position: Position, size?: LayoutItemSize }) => {
         const instanceId = guid();
 
         const data: WidgetInFolder<T> = {

@@ -1,4 +1,4 @@
-import { NoxPlugin, Folder, WidgetDescriptor } from '@utils/user-data/types';
+import { ishitaPlugin, Folder, WidgetDescriptor } from '@utils/user-data/types';
 import './NewWidgetWizard.scss';
 import { availablePluginsWithWidgets } from '@plugins/all';
 import { WidgetCard } from '@components/WidgetCard';
@@ -23,7 +23,7 @@ export type NewWidgetWizardProps = {
 };
 
 export const NewWidgetWizard = ({ onClose, folder, gridDimensions, layout }: NewWidgetWizardProps) => {
-    const tryAddWidget = (plugin: NoxPlugin, widget: WidgetDescriptor<any>, config: any) => {
+    const tryAddWidget = (plugin: ishitaPlugin, widget: WidgetDescriptor<any>, config: any) => {
         console.log({ gridDimensions, layout });
         let position = findPositionForItemInGrid({ grid: gridDimensions, layout, item: widget.appearance.size });
         if (!position) {
@@ -44,7 +44,7 @@ export const NewWidgetWizard = ({ onClose, folder, gridDimensions, layout }: New
         onClose();
     };
 
-    const onWidgetClick = (widget: WidgetDescriptor<any>, plugin: NoxPlugin) => {
+    const onWidgetClick = (widget: WidgetDescriptor<any>, plugin: ishitaPlugin) => {
         if (widget.configurationScreen) {
             setSelectedPlugin(plugin);
             setSelectedWidget(widget);
@@ -56,7 +56,7 @@ export const NewWidgetWizard = ({ onClose, folder, gridDimensions, layout }: New
     const { addWidget } = useFolderWidgets(folder);
     const [_searchQuery, setSearchQuery] = useState('');
     const searchQuery = _searchQuery.toLowerCase();
-    const [selectedPlugin, setSelectedPlugin] = useState<NoxPlugin | undefined>(undefined);
+    const [selectedPlugin, setSelectedPlugin] = useState<ishitaPlugin | undefined>(undefined);
     const [selectedWidget, setSelectedWidget] = useState<WidgetDescriptor<any> | undefined>(undefined);
     const { t } = useTranslation();
     const dir = useDirection();

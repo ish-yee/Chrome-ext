@@ -1,5 +1,5 @@
 import moment from 'moment-timezone';
-import { NoxPlugin, WidgetConfigurationScreenProps, WidgetDescriptor, WidgetRenderProps } from '@utils/user-data/types';
+import { ishitaPlugin, WidgetConfigurationScreenProps, WidgetDescriptor, WidgetRenderProps } from '@utils/user-data/types';
 import './styles.scss';
 import { Button } from '@components/Button';
 import { useState } from 'react';
@@ -231,4 +231,4 @@ export const datetimePlugin = {
         datetimeWidgetDescriptorM,
     ],
     configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

@@ -200,7 +200,7 @@ const config = async (env: WebpackEnvs): Promise<webpack.Configuration> => {
 
     const paths = createPathsObject(
         baseSrc,
-        targetBrowser === 'safari' ? `./safari-app/Nox/Shared (Extension)/Resources` : joinPath(baseDist, targetBrowser)
+        targetBrowser === 'safari' ? `./safari-app/ishita/Shared (Extension)/Resources` : joinPath(baseDist, targetBrowser)
     );
 
     const pageTemplate = fs.readFileSync(paths.src.pageHtmlTemplate, {
@@ -480,10 +480,10 @@ const config = async (env: WebpackEnvs): Promise<webpack.Configuration> => {
                             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                             return path.join(paths.dist.locales, absoluteFilename!.replace(assetAbsolutePath, ''));
                         },
-                        // Only for Safari we rename extension to just 'Nox', to make it easier to deeplink extension settings from app
+                        // Only for Safari we rename extension to just 'ishita', to make it easier to deeplink extension settings from app
                         transform: targetBrowser === 'safari' ? (content, absoluteFrom) => {
                             if (absoluteFrom.endsWith('messages.json')) {
-                                return content.toString().replace(/(?<="appName":\s?{\s*"message":\s?")[^"]+/i, 'Nox');
+                                return content.toString().replace(/(?<="appName":\s?{\s*"message":\s?")[^"]+/i, 'ishita');
                             }
                             return content;
                         } : undefined,

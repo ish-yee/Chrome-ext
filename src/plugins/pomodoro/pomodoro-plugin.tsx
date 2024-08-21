@@ -1,5 +1,5 @@
 import { Button } from "@components/Button";
-import { NoxPlugin, WidgetConfigurationScreenProps, WidgetRenderProps } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetConfigurationScreenProps, WidgetRenderProps } from "@utils/user-data/types";
 import { useState, useEffect, useMemo } from "react";
 import './styles.scss';
 import { Icon } from "@components/Icon";
@@ -126,4 +126,4 @@ export const pomodoroPlugin = {
     widgetDescriptor,
   ],
   configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

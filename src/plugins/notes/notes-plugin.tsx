@@ -1,5 +1,5 @@
 import { Input, Textarea } from "@components/Input";
-import { NoxPlugin, WidgetRenderProps } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetRenderProps } from "@utils/user-data/types";
 import { ComponentProps, Suspense, lazy, useEffect, useRef, useState } from "react";
 import './styles.scss';
 import { useWidgetStorage } from "@utils/plugin";
@@ -127,4 +127,4 @@ export const notesPlugin = {
         notesWidgetDescriptor,
     ],
     configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

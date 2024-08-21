@@ -2,7 +2,7 @@
     "name": "The-Daily-Prophet",
     "description": "Customizable new tab: compose your own page from widgets",
     "version": "1",
-    "author": "Nox",
+    "author": "ishita",
     "scripts": {
         "postinstall": "patch-package",
         "dev": "webpack build --config webpack.config.ts --env mode=development",

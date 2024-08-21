@@ -2,7 +2,7 @@ import { Command } from 'cmdk';
 import { useEffect, useState } from 'react';
 import './CommandMenu.scss';
 import { Icon } from '@components/Icon';
-import { NoxPlugin, CommandItem } from '@utils/user-data/types';
+import { ishitaPlugin, CommandItem } from '@utils/user-data/types';
 import { availablePlugins } from '@plugins/all';
 import { wait } from '@utils/misc';
 import { ScrollArea } from '@components/ScrollArea';
@@ -13,7 +13,7 @@ const ON_COMMAND_INPUT_TIMEOUT = 300;
 
 type ActionsWithMetadata = {
     items: CommandItem[],
-    plugin: NoxPlugin<any, any>
+    plugin: ishitaPlugin<any, any>
 };
 
 export const CommandMenu = ({ open, onOpenChange }: { open: boolean, onOpenChange: (newOpen: boolean) => void, }) => {

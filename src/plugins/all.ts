@@ -1,4 +1,4 @@
-import { NoxPlugin } from "@utils/user-data/types";
+import { ishitaPlugin } from "@utils/user-data/types";
 import { bookmarkPlugin } from "./bookmark/bookmark-plugin";
 import { datetimePlugin } from "./datetime/datetime-plugin";
 import { searchPlugin } from "./search/search-plugin";
@@ -19,7 +19,7 @@ import { duolingoPlugin } from "./duolingo/duolingo"
 import { crosswordPlugin } from "./crossword/crossword"
 import { mathpuzzlePlugin } from "./mathpuzzle/mathpuzzle";
 
-export const availablePlugins: NoxPlugin<any, any>[] = [
+export const availablePlugins: ishitaPlugin<any, any>[] = [
     searchPlugin,
     notesPlugin,
     tasksPlugin,

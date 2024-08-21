@@ -1,5 +1,5 @@
 import { Button } from "@components/Button";
-import { NoxPlugin, OnCommandInputCallback, WidgetRenderProps, WidgetDescriptor } from "@utils/user-data/types";
+import { ishitaPlugin, OnCommandInputCallback, WidgetRenderProps, WidgetDescriptor } from "@utils/user-data/types";
 import './styles.scss';
 import { useWidgetMetadata } from "@utils/plugin";
 import { translate } from "@translations/index";
@@ -288,4 +288,4 @@ export const mathPlugin = {
     ],
     onCommandInput,
     configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

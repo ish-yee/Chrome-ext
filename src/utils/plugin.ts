@@ -1,12 +1,12 @@
 import browser from 'webextension-polyfill';
 import { AtomWithBrowserStorage, atomWithBrowserStorage, storage, useAtomWithStorage } from "./storage/api";
-import { NoxPlugin, FolderDetailsInStorage, ID, OnMessageDescriptor, WidgetInFolderWithMeta, homeFolder } from "./user-data/types";
+import { ishitaPlugin, FolderDetailsInStorage, ID, OnMessageDescriptor, WidgetInFolderWithMeta, homeFolder } from "./user-data/types";
 import { SetStateAction, createContext, useContext, useMemo } from 'react';
 import { NamespacedStorage } from './namespaced-storage';
 import { LayoutItemSize } from './grid';
 
 
-export const getAllWidgetsByPlugin = async <PT extends {}, WT extends {}>(plugin: NoxPlugin<PT, WT>) => {
+export const getAllWidgetsByPlugin = async <PT extends {}, WT extends {}>(plugin: ishitaPlugin<PT, WT>) => {
     const foldersFromStorage = await storage.getOne('folders');
     const folders = [
         homeFolder,
@@ -78,7 +78,7 @@ export const usePluginStorage = <StorageT extends {}>() => {
 // ---- Plugin config ----
 
 const pluginConfigAtoms: Record<ID, AtomWithBrowserStorage<any>> = {};
-const getPluginConfigAtom = <T extends {}>(plugin: NoxPlugin<T>) => {
+const getPluginConfigAtom = <T extends {}>(plugin: ishitaPlugin<T>) => {
     if (!pluginConfigAtoms[plugin.id]) {
         pluginConfigAtoms[plugin.id] = atomWithBrowserStorage<T | undefined>(`PluginConfig.${plugin.id}`, undefined);
     }
@@ -86,9 +86,9 @@ const getPluginConfigAtom = <T extends {}>(plugin: NoxPlugin<T>) => {
     return pluginConfigAtoms[plugin.id];
 };
 
-export function usePluginConfig<T extends {}>(plugin: NoxPlugin<T>): readonly [value: T | undefined, setValue: (val: SetStateAction<T>) => void, isLoaded: boolean];
-export function usePluginConfig<T extends {}>(plugin: NoxPlugin<T>, defaultConfig: T): readonly [value: T, setValue: (val: SetStateAction<T>) => void, isLoaded: boolean];
-export function usePluginConfig<T extends {}>(plugin: NoxPlugin<T>, defaultConfig?: T): readonly [value: T | undefined, setValue: (val: SetStateAction<T>) => void, isLoaded: boolean] {
+export function usePluginConfig<T extends {}>(plugin: ishitaPlugin<T>): readonly [value: T | undefined, setValue: (val: SetStateAction<T>) => void, isLoaded: boolean];
+export function usePluginConfig<T extends {}>(plugin: ishitaPlugin<T>, defaultConfig: T): readonly [value: T, setValue: (val: SetStateAction<T>) => void, isLoaded: boolean];
+export function usePluginConfig<T extends {}>(plugin: ishitaPlugin<T>, defaultConfig?: T): readonly [value: T | undefined, setValue: (val: SetStateAction<T>) => void, isLoaded: boolean] {
 
     const [val, setVal, meta] = useAtomWithStorage(getPluginConfigAtom<T>(plugin));
     
@@ -99,7 +99,7 @@ export function usePluginConfig<T extends {}>(plugin: NoxPlugin<T>, defaultConfi
     ] as const;
 }
 
-export const getPluginConfig = <T extends {}>(plugin: NoxPlugin<T>) => {
+export const getPluginConfig = <T extends {}>(plugin: ishitaPlugin<T>) => {
     return storage.getOneDynamic<T>(`PluginConfig.${plugin.id}`);
 };
 

@@ -9,7 +9,7 @@ import { ReactNode } from 'react';
 import { useSizeSettings } from '@utils/compact';
 import { DndItemMeta, ensureDndItemType, useDraggable } from '@utils/drag-and-drop';
 import { minmax } from '@utils/misc';
-import { NoxPlugin, WidgetDescriptor } from '@utils/user-data/types';
+import { ishitaPlugin, WidgetDescriptor } from '@utils/user-data/types';
 import { LayoutItemSize, Position, positionToPixelPosition, snapToSector } from '@utils/grid';
 import { WidgetMetadataContext } from '@utils/plugin';
 import { createPortal } from 'react-dom';
@@ -49,7 +49,7 @@ const WidgetCardContext = createContext({
 
 type WidgetCardProps<T extends {}, PT extends T> = {
     widget: WidgetDescriptor<T>,
-    plugin: NoxPlugin<any, PT>,
+    plugin: ishitaPlugin<any, PT>,
 } & ({
     type: 'mock',
     config?: undefined,
@@ -157,7 +157,7 @@ export const WidgetCard = <T extends {}, PT extends T>({
     const resizeWidth = useMotionValue(convertUnitsToPixels(sizeToUse.width));
     const resizeHeight = useMotionValue(convertUnitsToPixels(sizeToUse.height));
     // We need a derived/readonly value to block framer motion from messing with value after initial render
-    // More info: https://github.com/OlegWock/Nox/issues/115
+    // More info: https://github.com/OlegWock/ishita/issues/115
     const readonlyResizeWidth = useDerivedMotionValue(resizeWidth, (v) => v);
     const readonlyResizeHeight = useDerivedMotionValue(resizeHeight, (v) => v);
     const [isResizing, setIsResizing] = useState(false);

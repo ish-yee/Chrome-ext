@@ -1,6 +1,6 @@
 import { Button } from "@components/Button";
 import {
-  NoxPlugin,
+  ishitaPlugin,
   WidgetConfigurationScreenProps,
   WidgetRenderProps,
   WidgetDescriptor,
@@ -100,4 +100,4 @@ export const crosswordPlugin = {
   },
   widgets: [widgetDescriptor],
   configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;
