@@ -2,7 +2,7 @@ import { Onboarding } from "@components/Onboarding";
 import { MotionScrollArea } from "@components/ScrollArea";
 import { WidgetCard } from "@components/WidgetCard";
 import { GridDimensions, Layout, LayoutItem, Position, canPlaceItemInGrid, layoutTo2DArray, positionToPixelPosition, willItemOverlay } from "@utils/grid";
-import { NoxPlugin, WidgetDescriptor, WidgetInFolderWithMeta } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetDescriptor, WidgetInFolderWithMeta } from "@utils/user-data/types";
 import { AnimatePresence, m } from "framer-motion";
 import { Ref } from "react";
 
@@ -13,7 +13,7 @@ type LayoutArg = {
     instanceId: string;
     configutation: any;
 } & {
-    plugin: NoxPlugin<any, any>;
+    plugin: ishitaPlugin<any, any>;
     widget: WidgetDescriptor<any>;
 };
 

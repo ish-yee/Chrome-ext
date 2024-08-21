@@ -41,7 +41,7 @@ import {
   Position,
   canPlaceItemInGrid,
 } from "@utils/grid";
-import { NoxPlugin, WidgetDescriptor } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetDescriptor } from "@utils/user-data/types";
 import { useMotionTransition } from "@utils/motion/hooks";
 import { useDirection } from "@radix-ui/react-direction";
 
@@ -88,7 +88,7 @@ export const Onboarding = ({
       size,
     }: {
       widget: WidgetDescriptor<T>;
-      plugin: NoxPlugin<any, T>;
+      plugin: ishitaPlugin<any, T>;
       config: T;
       position: Position;
       size?: LayoutItemSize;

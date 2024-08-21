@@ -1,6 +1,6 @@
 import { Button } from "@components/Button";
 import { Input } from "@components/Input";
-import { NoxPlugin, WidgetConfigurationScreenProps, OnCommandInputCallback, WidgetRenderProps, ID } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetConfigurationScreenProps, OnCommandInputCallback, WidgetRenderProps, ID } from "@utils/user-data/types";
 import { Suspense, forwardRef, lazy, useRef, useState } from "react";
 import './styles.scss';
 import { Icon } from "@components/Icon";
@@ -33,26 +33,7 @@ type Task = {
 type TaskWidgetStorageType = { tasks: Task[] };
 
 const devOnlyMockTasks = [
-    `Buy groceries: Eggs, milk, bread, and fruits.`,
-    `Finish report for work presentation.`,
-    `Call plumber to fix the leaky faucet.`,
-    `Read the first three chapters of "The Great Gatsby."`,
-    `Pay monthly bills: electricity, internet, and water.`,
-    `Plan weekend hiking trip: research trails and pack essentials.`,
-    `Organize closet: donate unused clothes.`,
-    `Schedule dentist appointment for a check-up.`,
-    `Write birthday card for mom.`,
-    `Complete online course module on time management.`,
-    `Update LinkedIn profile with recent achievements.`,
-    `Water indoor plants and apply fertilizer.`,
-    `Install updates for computer and phone.`,
-    `Sort out paperwork for tax filing.`,
-    `Research recipes for a dinner party menu.`,
-    `Run 5 kilometers in the park.`,
-    `Create a budget for the upcoming month.`,
-    `Call Jane to catch up and arrange a coffee date.`,
-    `Declutter garage: organize tools and donate old items.`,
-    `Start a journal: write about the day's highlights and reflections.`,
+    ` `,
 ];
 
 
@@ -307,4 +288,4 @@ export const tasksPlugin = {
     ],
     configurationScreen: null,
     onCommandInput,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

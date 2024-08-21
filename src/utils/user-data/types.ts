@@ -51,7 +51,7 @@ export type WidgetInFolder<T extends {}> = {
 } & LayoutItem;
 
 export type WidgetInFolderWithMeta<T extends WT, P extends {}, WT extends {}> = WidgetInFolder<T> & {
-    plugin: NoxPlugin<P, WT>,
+    plugin: ishitaPlugin<P, WT>,
     widget: WidgetDescriptor<T>,
 }
 
@@ -65,7 +65,7 @@ export const homeFolder = {
 
 // ------ Plugins
 
-export type NoxPlugin<T extends {} = {}, WT extends {} = {}> = {
+export type ishitaPlugin<T extends {} = {}, WT extends {} = {}> = {
     id: ID,
     name: string,
     widgets: Array<WidgetDescriptor<WT> | WidgetDescriptor<WT>[]>,

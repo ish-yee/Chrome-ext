@@ -1,5 +1,5 @@
 import { Button } from "@components/Button";
-import { NoxPlugin, WidgetConfigurationScreenProps, WidgetRenderProps } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetConfigurationScreenProps, WidgetRenderProps } from "@utils/user-data/types";
 import { useEffect, useMemo, useState } from "react";
 import './styles.scss';
 import { Combobox } from "@components/Combobox";
@@ -430,4 +430,4 @@ export const weatherPlugin = {
         weatherWidgetDescriptorForecast,
     ],
     configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

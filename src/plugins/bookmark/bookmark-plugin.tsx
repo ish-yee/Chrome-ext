@@ -1,6 +1,6 @@
 import { Button } from "@components/Button";
 import { Input } from "@components/Input";
-import { NoxPlugin, WidgetConfigurationScreenProps, OnCommandInputCallback, WidgetRenderProps, WidgetDescriptor, ID, WidgetInFolderWithMeta } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetConfigurationScreenProps, OnCommandInputCallback, WidgetRenderProps, WidgetDescriptor, ID, WidgetInFolderWithMeta } from "@utils/user-data/types";
 import { MouseEvent, MouseEventHandler, useRef, useState } from "react";
 import './styles.scss';
 import { Popover } from "@components/Popover";
@@ -564,7 +564,7 @@ const { handlers, sendMessage } = createOnMessageHandlers<BookmarksMessageHandle
     },
 });
 
-export const bookmarkPlugin: NoxPlugin<{}, BookmarkWidgetConfigType | BookmarkGroupWidgetConfigType> = {
+export const bookmarkPlugin: ishitaPlugin<{}, BookmarkWidgetConfigType | BookmarkGroupWidgetConfigType> = {
     id: 'bookmark-plugin',
     get name() {
         return translate('bookmark-plugin.name')

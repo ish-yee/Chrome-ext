@@ -1,5 +1,5 @@
 import {
-  NoxPlugin,
+  ishitaPlugin,
   OnCommandInputCallback,
   WidgetConfigurationScreenProps,
   WidgetDescriptor,
@@ -201,4 +201,4 @@ export const searchPlugin = {
   onCommandInput,
   widgets: [searchWidgetDescriptor],
   configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;

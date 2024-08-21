@@ -1,5 +1,5 @@
 import { Button } from "@components/Button";
-import { NoxPlugin, WidgetConfigurationScreenProps, OnCommandInputCallback, WidgetRenderProps, WidgetDescriptor } from "@utils/user-data/types";
+import { ishitaPlugin, WidgetConfigurationScreenProps, OnCommandInputCallback, WidgetRenderProps, WidgetDescriptor } from "@utils/user-data/types";
 import './styles.scss';
 import { getAllWidgetsByPlugin } from "@utils/plugin";
 import { translate } from "@translations/index";
@@ -70,4 +70,4 @@ export const pluginnamePlugin = {
     ],
     onCommandInput,
     configurationScreen: null,
-} satisfies NoxPlugin;
+} satisfies ishitaPlugin;
