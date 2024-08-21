@@ -17,26 +17,28 @@ import { primePlugin } from "./prime/prime";
 import { f1tvPlugin } from "./f1tv/f1tv";
 import { duolingoPlugin } from "./duolingo/duolingo"
 import { crosswordPlugin } from "./crossword/crossword"
+import { mathpuzzlePlugin } from "./mathpuzzle/mathpuzzle";
 
 export const availablePlugins: NoxPlugin<any, any>[] = [
-    bookmarkPlugin,
-    datetimePlugin,
+    searchPlugin,
     notesPlugin,
     tasksPlugin,
-    mathPlugin,
-    searchPlugin,
-    weatherPlugin,
-    calendarPlugin,
-    imagePlugin,
-    googleslidePlugin,
-    pomodoroPlugin,
     chatgptPlugin,
     spotifyPlugin,
     netflixPlugin,
     primePlugin,
     f1tvPlugin,
     duolingoPlugin,
-    crosswordPlugin
+    crosswordPlugin,
+    mathpuzzlePlugin,
+    bookmarkPlugin,
+    datetimePlugin,
+    mathPlugin,
+    weatherPlugin,
+    calendarPlugin,
+    imagePlugin,
+    googleslidePlugin,
+    pomodoroPlugin
 ]
 
 export const availablePluginsWithWidgets = availablePlugins.filter(p => p.widgets.length > 0);
