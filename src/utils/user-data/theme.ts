@@ -45,11 +45,11 @@ export type Theme = BuiltinTheme | CustomTheme;
 const BLUE: BuiltinTheme = {
     name: 'Forest lake',
     type: 'builtin',
-    background: 'bg.png',
+    background: 'Black.png' ,
     colors: {
-        accent: fromHsl(193, 75.1, 60.6),
-        text: fromHsl(0, 0, 100),
-        background: fromHsl(200, 78.9, 22.4),
+        accent: fromHsl(270, 100, 25), //Purple
+        text: fromHsl(0, 0, 100), // White
+        background: fromHsl(0, 0, 20), // Grey
     }
 };
 

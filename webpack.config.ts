@@ -59,8 +59,8 @@ const generateManifest = (
             service_worker: 'background.js',
         },
         icons: {
-            '48': 'assets/images/logo-hyperverge.png',
-            '128': 'assets/images/logo-hyperverge.png',
+            '48': 'assets/images/logo.jpeg',
+            '128': 'assets/images/logo.jpeg',
         },
         permissions: [
             'alarms',

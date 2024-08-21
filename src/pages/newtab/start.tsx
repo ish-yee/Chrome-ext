@@ -236,7 +236,7 @@ const Start = () => {
 watchForPermissionChanges();
 
 storage.getOne("newTabTitle").then((title) => {
-  setPageTitle(title || "Hyperverge new tab");
+  setPageTitle(title || "Dashboard new tab");
 });
 
 storage.getOne("showBookmarksBar").then((showBookmarksBar) => {
